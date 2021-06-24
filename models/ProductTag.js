@@ -10,7 +10,7 @@ ProductTag.init(
       type: DataTypes.INTEGER,
       allowNull: false, 
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
     },
     product_id: {
       type: DataTypes.INTEGER,
@@ -32,7 +32,7 @@ ProductTag.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'ProductTag',
+    modelName: 'producttag',
   }
 );
 

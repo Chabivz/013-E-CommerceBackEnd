@@ -8,16 +8,9 @@ router.get('/', async (req, res) => {
   // be sure to include its associated Product data
   try {
     const tagsData = await Tag.findAll({
-      include: [
-        { model: Product },
-      ],
+      include: [{ model: Product, through: ProductTag, as: 'tag_brand'}]
     });
-
-    const tags = tagsData.map((project) => project.get({ plain: true }));
-
-    res.render('homepage', { tags });
-
-
+    res.status(200).json(tagsData);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -27,18 +20,17 @@ router.get('/:id', async (req, res) => {
   // find a single tag by its `id`
   // be sure to include its associated Product data
   try {
-    const tagsData = await Tag.findByPk({
-      include: [
-        {
-        model: Product,
-        attributes: ['name'],
-      },
-      ],
+    const tagsData = await Tag.findByPk(req.params.id, {
+      include: [{ model: Product, through: ProductTag, as: 'tag_brand'}]
     });
 
-    const tags = tagsData.map((project) => project.get({ plain: true }));
+    if (!travellerData) {
+      res.status(404).json({ message: 'No Tag found with this id!' });
+    return;
+    }
 
-    res.render('homepage', { tags });
+    res.status(200).json(tagsData);
+
   } catch (err) {
     res.status(500).json(err);
   }
