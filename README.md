@@ -2,7 +2,7 @@
 [![Badge](https://img.shields.io/badge/GitHub-chabivz-blue?style=flat-square&logo=appveyor)](https://github.com/chabivz)
 # 🖥️ E-Commerce Back End : Object-Relational Mapping (ORM)
 
-A back end for an e-commerce site using Espress.js API to use Sequelize to interact with a MySQL database! A walk through video will be provided with the use of [Insomnia](https://insomnia.rest/).
+ using Espress.js API to use Sequelize to interact with a MySQL database! A walk through video will be provided with the use of [Insomnia](https://insomnia.rest/).
 
 ## 🧐  Table of Contents
 
@@ -20,16 +20,18 @@ A back end for an e-commerce site using Espress.js API to use Sequelize to inter
 - Open [Github Repo](https://github.com/Chabivz/013-E-CommerceBackEnd)
 - Clone the repository
 - install all the packages by `npm i`
+- Copy and Paste the `db/schema.sql` to MySQL Workbench
+- Seed the data by running `npm seeds/index.js` or `npm seeds`
 - Start the server by typing `node server.js` or `npm run start`
 
+
 ## Usage
-
-
+- Open the application with `Insomnia` or other apps for calling API.
+- Make a `Get`, `Post`, and `Delete` request on `Product`, `Tag`, & `Category` fields
 
 |Youtube Walkthrough|
 |---|
-|[![Team Profile Generator Walk Through](https://play-lh.googleusercontent.com/vA4tG0v4aasE7oIvRIvTkOYTwom07DfqHdUPr6k7jmrDwy_qA_SonqZkw6KX0OXKAdk)](https://www.youtube.com/watch?v=7X6k_zpWhfc)|
-|[Demo](https://drive.google.com/file/d/15tNiPBjcDaDgb8G_2wOP0vK9r4Br70gA/view?usp=sharing)|
+|[![Team Profile Generator Walk Through](https://play-lh.googleusercontent.com/vA4tG0v4aasE7oIvRIvTkOYTwom07DfqHdUPr6k7jmrDwy_qA_SonqZkw6KX0OXKAdk)](https://www.youtube.com/watch?v=8U1-wGslI88)|
 
 ## Question
 
